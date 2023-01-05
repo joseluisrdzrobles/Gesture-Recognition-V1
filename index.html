@@ -1,0 +1,80 @@
+<html>
+    <head>
+      <title>Gestos manuales</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="style.css">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    </head>
+  
+    <body>
+    <div class="container">
+    
+      <center>
+        <h2 class="btn btn-danger heading"> Aplicacion Gestos a Emoji ✋
+        <br>
+        <span>🤏</span>
+        <span>👍</span>
+        <span>👎</span>
+        <span>✌</span>
+        </h2>
+  
+        <br><br>
+  
+        <p> Take your photo to generate your emoji 🖼️
+            <br>
+          <b style="color: rgb(255, 255, 255)">Italian 🤏</b>
+          <br>
+          <b style="color: rgb(255, 255, 255)">Good 👍</b>
+          <br>
+          <b style="color: rgb(255, 255, 255)">Bad 👎</b>
+          <br>
+          <b style="color: rgb(255, 255, 255)">Peace ✌</b>
+        </p>
+       
+            <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Camera view 👀 - </label>
+            <div id="camera"></div>
+            <br><br>
+            <button onclick="take_snapshot();" class="btn btn-warning">Take photo 📸</button>
+        </div>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Prediction 1 ❓ - </label>
+            <p class="emotion_name" id="result_emotion_name"></p>
+            <p class="emoji" id="update_emoji"></p>
+  
+            <label>Prediction 2 ❓ - </label>
+            <p class="emotion_name" id="result_emotion_name2"></p>
+            <p class="emoji" id="update_emoji2"></p>
+          </div>
+  
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Snapshot 📷 - </label>
+            <div id="result"></div>
+            <br><br>
+            <button onclick="check();" class="btn btn-success">Predict emotion ❓</button>
+           </div>
+  
+      </center>
+  
+    </div>
+  
+  <script src="main.js"></script>
+  
+    </body>
+  </html>
+  
